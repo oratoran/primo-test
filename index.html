@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <style type="text/css">
+      [data-theme="light"] {
+        --bg-color: #fff;
+        --bg-color-secondary: #eee;
+        --text-color: #111;
+      }
+
+      [data-theme="dark"] {
+        --bg-color: #171717;
+        --bg-color-secondary: #262626;
+        --text-color: #eee;
+      }
+
+      .block {
+        font-family: 'General Sans', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.2s, color 0.2s;
+      }
+
+      .container {
+        max-width: 1200px;
+      }
+
+      .heading {
+        font-size:40px;
+        font-weight: 500;
+        line-height:50px;
+        margin-bottom: 1rem;
+      }
+
+      .primo-copy p {
+        font-family: Nunito, sans-serif;
+        color: var(--text-color);
+        font-size: 17px;
+        line-height: 28px;
+      }
+    </style>
+  </head>
+  <body data-instant-intensity="all" class="primo-page">
+    <div class="block" id="block-jresb">
+      <div class="primo-component" id="component-jresb">
+        <div>
+          <aside>
+            <div class="theme-switch-wrapper container">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+            </div>
+          </aside>
+        </div>
+        <script type="module">
+                  const primo = {
+                    id: 'jresb',
+                    data: {},
+                    fields: []
+                  }
+                  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+          const currentTheme = localStorage.getItem('theme');
+
+          if (currentTheme) {
+            document.querySelector('body').setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+          } else {
+            document.querySelector('body').setAttribute('data-theme', 'light');
+          }
+
+          function switchTheme(e) {
+              if (e && e.target.checked) {
+                document.querySelector('body').setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+              }
+              else {
+                document.querySelector('body').setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+              }
+          }
+
+          toggleSwitch.addEventListener('change', switchTheme, false);
+        </script>
+      </div>
+      <style type="text/css">
+        #component-jresb aside {
+            padding: 1rem 0;
+          }
+          #component-jresb .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+          #component-jresb .theme-switch-wrapper em {
+              margin-left: 10px;
+              font-size: 1rem;
+            }
+          #component-jresb .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+          }
+          #component-jresb .theme-switch input {
+            display:none;
+          }
+          #component-jresb .slider {
+            background-color: #111;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+          }
+          #component-jresb .slider:before {
+              background-color: #eee;
+              bottom: 4px;
+              content: "";
+              height: 26px;
+              left: 4px;
+              position: absolute;
+              transition: .4s;
+              width: 26px;
+            }
+          #component-jresb input:checked + .slider {
+            background-color: #eee;
+          }
+          #component-jresb input:checked + .slider:before {
+              background-color: #111;
+            }
+          #component-jresb input:checked + .slider:before {
+            transform: translateX(26px);
+          }
+          #component-jresb .slider.round {
+            border-radius: 34px;
+          }
+          #component-jresb .slider.round:before {
+            border-radius: 50%;
+          }
+          #component-jresb [data-theme="light"] {
+            --bg-color: #eee;
+            --bg-color-secondary: #f5f5f5;
+            --text-color: #111;
+          }
+          #component-jresb [data-theme="dark"] {
+            --bg-color: #111;
+            --bg-color-secondary: #121212;
+            --text-color: #eee;
+          }
+          #component-jresb [data-theme] {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.2s, color 0.2s;
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-oktpu">
+      <div class="primo-component" id="component-oktpu">
+        <div>
+          <div class="header">
+            <div class="container">
+              <a href="#" class="logo-text">Jane Doe</a>
+              <h1>Hi! I'm Jane Doe.<br />I design graphics and websites.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-oktpu {
+          --primary-color: rgb(30,123,167);
+        }
+          #component-oktpu .header{
+            padding:70px 0;
+          }
+          #component-oktpu .logo-text {
+            font-size:30px;
+            line-height:50px;
+            display:inline-block;
+            margin:0;
+            color: var(--primary-color);
+            border-bottom: 4px solid var(--primary-color);
+            border-opacity: 0.25;
+          }
+          #component-oktpu h1 {
+            font-size:90px;
+            line-height:92px;
+            margin:70px 0 0 0;
+            font-weight:400;
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-eziwc">
+      <div class="primo-component" id="component-eziwc">
+        <div>
+          <figure class="section no-padding-top">
+            <div class="container">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>Cover Design</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Packaging</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80"
+                      alt="graphic designs"
+                    />
+                    <span>Design</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="https://images.unsplash.com/photo-1592773675167-d588aab626a1?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1650&amp;q&#x3D;80"
+                      alt="A group of wine bottles"
+                    />
+                    <span>Wine Labels</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Website Design</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1374&amp;q&#x3D;80"
+                      alt="stack of books"
+                    />
+                    <span>Books</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="https://images.unsplash.com/photo-1540247722900-f91e38e1f36c?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1351&amp;q&#x3D;80"
+                      alt="business cards"
+                    />
+                    <span>Business Cards</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Textbooks</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="https://images.unsplash.com/photo-1491252645376-253f0f174d78?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1372&amp;q&#x3D;80"
+                      alt="posters on a wall"
+                    />
+                    <span>Posters</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Stationary Design</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80"
+                      alt="iphone"
+                    />
+                    <span>Mobile Apps</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Website Redesigns</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-eziwc {
+          --primary-color: rgb(30,123,167);
+          --font-size: 1rem;
+        }
+          #component-eziwc figure {
+            padding: 2rem 0;
+          }
+          #component-eziwc ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2rem;
+          }
+          #component-eziwc ul li {
+              background: var(--primary-color);
+              position: relative;
+              padding: 5rem 0;
+              font-size: var(--font-size);
+              text-transform: uppercase;
+              font-weight: 500;
+              color: white;
+              text-align: center;
+              letter-spacing: 1px;
+            }
+          #component-eziwc ul li a {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+              }
+          #component-eziwc ul li a img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 100%;
+                  width: 100%;
+                  -o-object-fit: cover;
+                     object-fit: cover;
+                  z-index: 0;
+                  transition: opacity 0.2s;
+                }
+          #component-eziwc ul li a img + span {
+                  color: transparent;
+                }
+          #component-eziwc ul li a span {
+                  z-index: 1;
+                  transition: color 0.2s;
+                }
+          #component-eziwc ul li a:hover img, #component-eziwc ul li a:focus img {
+                    opacity: 0.1;
+                  }
+          #component-eziwc ul li a:hover span, #component-eziwc ul li a:focus span {
+                    color: white;
+                  }
+      </style>
+    </div>
+
+    <div class="block" id="block-oegwk">
+      <div class="primo-component" id="component-oegwk">
+        <div>
+          <section>
+            <div class="container">
+              <div class="primo-copy">
+                <h2 class="heading">About me</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;634&amp;q&#x3D;80"
+                alt="Person"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-oegwk section {
+            background: var(--bg-color-secondary);
+            padding: 6rem 0;
+          }
+          #component-oegwk .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 4rem;
+          }
+          #component-oegwk .container .content {
+              flex: 3;
+              margin-right: 2rem;
+            }
+          #component-oegwk .container img {
+              flex: 1;
+              margin-left: auto;
+            }
+      </style>
+    </div>
+
+    <div class="block" id="block-sytvy">
+      <div class="primo-component" id="component-sytvy">
+        <div>
+          <section>
+            <div class="container">
+              <div class="primo-copy">
+                <h3 class="heading">Contact Me</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+              <form
+                action="#"
+                method="post"
+                spellcheck="false"
+                autocomplete="off"
+              >
+                <div id="msg"></div>
+                <label>
+                  <span>Name</span>
+                  <input type="text" />
+                </label>
+                <label>
+                  <span>Subject</span>
+                  <input type="text" />
+                </label>
+                <label>
+                  <span>Your Email</span>
+                  <input type="email" />
+                </label>
+                <label>
+                  <span>Message</span>
+                  <textarea name="message"></textarea>
+                </label>
+                <input
+                  class="button"
+                  type="submit"
+                  value="Send"
+                  name="submit"
+                />
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-sytvy section {
+            padding: 4rem 0;
+          }
+            #component-sytvy section .container {
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-gap: 1rem;
+            }
+            #component-sytvy section form{
+              text-align:left;
+            }
+            #component-sytvy section input,#component-sytvy section button,#component-sytvy section textarea,#component-sytvy section select{
+              padding:7px;
+              background-color:var(--bg-color-secondary);
+              width:100%;
+              box-sizing:border-box;
+              border: 0;
+            }
+            #component-sytvy section button:focus, #component-sytvy section submit:focus{
+              outline:0;
+            }
+            #component-sytvy section textarea{
+              min-height:250px;
+              overflow:auto;
+            }
+            #component-sytvy section .button {
+              background-color:rgb(30,123,167);
+              border-radius:99px;
+              color:#ffffff;
+              border:0;
+              width:auto;
+              cursor:pointer;
+              min-width:100px;
+              -webkit-appearance:none;
+              font-weight:600;
+            }
+            /*Label*/
+            #component-sytvy section label{
+              font-weight:600;
+              margin: 1.5rem 0;
+              display: block;
+            }
+            #component-sytvy section label span {
+                display: block;
+                padding-bottom: 0.25rem;
+              }
+          @media (min-width: 900px) {
+              #component-sytvy section .container {
+                grid-template-columns: 1fr 2fr;
+                grid-gap: 3rem;
+              }
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-yanzp">
+      <div class="primo-component" id="component-yanzp">
+        <div>
+          <footer>
+            <ul class="container">
+              <li>
+                <a href="#" class="fab fa-twitter" title="Twitter">
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fab fa-facebook" title="Facebook">
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fab fa-snapchat" title="Snapchat">
+                  <span class="sr-only">Snapchat</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fab fa-youtube" title="Youtube">
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
+            </ul>
+            <div class="subfooter">&copy; Jane Doe.</div>
+          </footer>
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/brands.css"
+            integrity="sha384-V5Z1KgRRJyY878qCx7+zUeTDm0FgjoYrbmSortFqRPGz+Ue6XDe4uIiMqB3tB/wd"
+            crossorigin="anonymous"
+          />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css"
+            integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+            crossorigin="anonymous"
+          />
+        </div>
+      </div>
+      <style type="text/css">
+        #component-yanzp footer ul {
+              padding: 4rem 0;
+              font-size: 2rem;
+              display: flex;
+              justify-content: center;
+            }
+              #component-yanzp footer ul li {
+                color: var(--text-color);
+                margin: 0 1rem;
+                transition: opacity 0.1s;
+              }
+              #component-yanzp footer ul li:hover {
+                  opacity: 0.75;
+                }
+            #component-yanzp footer .subfooter {
+              color: #999;
+              padding: 1rem;
+            }
+      </style>
+    </div>
+
+    <link
+      href="https://api.fontshare.com/css?f[]=general-sans@400,500,600&display=swap"
+      rel="stylesheet"
+    />
+  </body>
+</html>

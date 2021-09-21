@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style type="text/css">
+      .block {
+        font-family: 'General Sans', sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+      }
+
+      .heading {
+        font-size:40px;
+        font-weight: 500;
+        line-height:50px;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body data-instant-intensity="all" class="primo-page">
+    <div class="block" id="block-ypbro">
+      <div class="primo-component" id="component-ypbro">
+        <div>
+          <aside>
+            <div class="theme-switch-wrapper container">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+            </div>
+          </aside>
+        </div>
+        <script type="module">
+                  const primo = {
+                    id: 'jresb',
+                    data: {},
+                    fields: []
+                  }
+                  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+          const currentTheme = localStorage.getItem('theme');
+
+          if (currentTheme) {
+            document.querySelector('body').setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+          } else {
+            document.querySelector('body').setAttribute('data-theme', 'light');
+          }
+
+          function switchTheme(e) {
+              if (e && e.target.checked) {
+                document.querySelector('body').setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+              }
+              else {
+                document.querySelector('body').setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+              }
+          }
+
+          toggleSwitch.addEventListener('change', switchTheme, false);
+        </script>
+      </div>
+      <style type="text/css">
+        #component-ypbro aside {
+            padding: 1rem 0;
+          }
+          #component-ypbro .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+          #component-ypbro .theme-switch-wrapper em {
+              margin-left: 10px;
+              font-size: 1rem;
+            }
+          #component-ypbro .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+          }
+          #component-ypbro .theme-switch input {
+            display:none;
+          }
+          #component-ypbro .slider {
+            background-color: #111;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+          }
+          #component-ypbro .slider:before {
+              background-color: #eee;
+              bottom: 4px;
+              content: "";
+              height: 26px;
+              left: 4px;
+              position: absolute;
+              transition: .4s;
+              width: 26px;
+            }
+          #component-ypbro input:checked + .slider {
+            background-color: #eee;
+          }
+          #component-ypbro input:checked + .slider:before {
+              background-color: #111;
+            }
+          #component-ypbro input:checked + .slider:before {
+            transform: translateX(26px);
+          }
+          #component-ypbro .slider.round {
+            border-radius: 34px;
+          }
+          #component-ypbro .slider.round:before {
+            border-radius: 50%;
+          }
+          #component-ypbro [data-theme="light"] {
+            --bg-color: #eee;
+            --bg-color-secondary: #f5f5f5;
+            --text-color: #111;
+          }
+          #component-ypbro [data-theme="dark"] {
+            --bg-color: #111;
+            --bg-color-secondary: #121212;
+            --text-color: #eee;
+          }
+          #component-ypbro [data-theme] {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.2s, color 0.2s;
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-okthn">
+      <div class="primo-component" id="component-okthn">
+        <div>
+          <div class="header">
+            <div class="container">
+              <a href="#" class="logo-text"><h1>Jane Doe</h1></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-okthn .header{
+            padding:70px 0;
+          }
+          #component-okthn .header h1{
+            font-size:30px;
+            font-weight: 500;
+            line-height:50px;
+            display:inline-block;
+            margin:0;
+            color:rgb(30,123,167);
+            border-bottom:4px solid rgba(30,123,167, 0.3);
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-oxbid">
+      <div class="primo-component" id="component-oxbid">
+        <div>
+          <div class="section no-padding-top work-content">
+            <div class="container">
+              <div class="images">
+                <img
+                  src="https://images.unsplash.com/photo-1495554626159-905646f110da?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80"
+                  alt="person standing holding onto white t-shirt"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80"
+                  alt="Organized Blogger Workstation"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1482160549825-59d1b23cb208?ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib&#x3D;rb-1.2.1&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1350&amp;q&#x3D;80"
+                  alt="promotional flyers torn up"
+                />
+              </div>
+              <div class="primo-copy">
+                <h1>Product packaging design</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="/" class="back-to-works">back to all works</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style type="text/css">
+        #component-oxbid .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 4rem;
+          }
+            #component-oxbid .container .images img {
+                margin-bottom: 1rem;
+              }
+            #component-oxbid .container .primo-copy {
+              padding-top: 3rem;
+              color: #707070;
+            }
+            #component-oxbid .container .primo-copy h1 {
+                font-weight: 600;
+                color: #000000;
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 1rem;
+              }
+            #component-oxbid .container .primo-copy .back-to-works {
+                border: 0;
+                padding: 25px 0;
+                text-transform: uppercase;
+                display: block;
+                font-weight: 600;
+                text-decoration: none;
+                color: rgb(30,123,167);
+              }
+            #component-oxbid .container .primo-copy .back-to-works:before {
+                  content: "<";
+                  padding-right: 0.5rem;
+                  position: relative;
+                  bottom: 1px;
+                }
+          @media (max-width: 900px) {
+            #component-oxbid .container {
+              grid-template-columns: 1fr;
+              grid-gap: 0.25rem;
+            }
+              #component-oxbid .container .images {
+                display: grid;
+                grid-gap: 1rem;
+                grid-auto-flow: column;
+              }
+          }
+      </style>
+    </div>
+
+    <div class="block" id="block-hwxfi">
+      <div class="primo-component" id="component-hwxfi">
+        <div>
+          <footer>
+            <ul class="container">
+              <li>
+                <a href="#" class="fab fa-twitter" title="Twitter">
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fab fa-facebook" title="Facebook">
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fab fa-snapchat" title="Snapchat">
+                  <span class="sr-only">Snapchat</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fab fa-youtube" title="Youtube">
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
+            </ul>
+            <div class="subfooter">&copy; Jane Doe.</div>
+          </footer>
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/brands.css"
+            integrity="sha384-V5Z1KgRRJyY878qCx7+zUeTDm0FgjoYrbmSortFqRPGz+Ue6XDe4uIiMqB3tB/wd"
+            crossorigin="anonymous"
+          />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css"
+            integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+            crossorigin="anonymous"
+          />
+        </div>
+      </div>
+      <style type="text/css">
+        #component-hwxfi footer ul {
+              padding: 4rem 0;
+              font-size: 2rem;
+              display: flex;
+              justify-content: center;
+            }
+              #component-hwxfi footer ul li {
+                color: var(--text-color);
+                margin: 0 1rem;
+                transition: opacity 0.1s;
+              }
+              #component-hwxfi footer ul li:hover {
+                  opacity: 0.75;
+                }
+            #component-hwxfi footer .subfooter {
+              color: #999;
+              padding: 1rem;
+            }
+      </style>
+    </div>
+
+    <link
+      href="https://api.fontshare.com/css?f[]=general-sans@400,500,600&display=swap"
+      rel="stylesheet"
+    />
+  </body>
+</html>
